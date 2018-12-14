@@ -1,22 +1,37 @@
 import React, { Fragment } from 'react';
+import Typography from '@material-ui/core/Typography';
+
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import { MenuIcon, IconButton } from 'icons';
+
 import './Header.css';
 
-const Header = () => (
-    <Fragment>
-      <header className="Header__header">
-        <span>
-          Header&nbsp;
-          <a
-            className="Header__link"
-            href="https://botbotdot.com"
-            target="_blank"
-            rel="noopener noreferrer"
+const Header = ({
+  toggleDrawer,
+}) => (
+  <Fragment>
+    <header className="Header__header">
+      <AppBar
+        position="fixed"
+      // className={classes.appBar}
+      >
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="Open drawer"
+            onClick={toggleDrawer}
+          // className={classes.menuButton}
           >
-            botbotdot.com
-          </a>
-        </span>
-      </header>
-    </Fragment>
-)
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" color="inherit" noWrap>
+            React Hooks Starter
+          </Typography>
+        </Toolbar>
+      </AppBar>
+    </header>
+  </Fragment>
+);
 
 export default Header;

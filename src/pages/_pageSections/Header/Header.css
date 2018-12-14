@@ -1,6 +1,6 @@
 .Header__header {
-  background-color: #282c34;
-  min-height: 10vh;
+  /* background-color: #282c34; */
+  /* min-height: 10vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,5 +10,5 @@
 }
 
 .Header__link {
-  color: #61dafb;
+  color: #282c34;
 }
