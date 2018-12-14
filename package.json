@@ -3,9 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test"
+    "test": "yarn run eslint && yarn run jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "eslint": "eslint src/. --fix-dry-run --config .eslintrc.json",
+    "eslint:fix": "eslint src/. --fix --config .eslintrc.json",
+    "mocha": "mocha test/ --recursive --exit",
+    "start": "NODE_PATH=src/adapters react-scripts start",
+    "watch": "NODE_PATH=src/adapters react-scripts start"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -20,11 +26,12 @@
     "@material-ui/core": "^3.6.2",
     "@material-ui/icons": "^3.0.1",
     "axios": "^0.18.0",
+    "eslint-import-resolver-alias": "^1.1.2",
     "history": "^4.7.2",
     "prop-types": "^15.6.2",
     "raven-js": "^3.27.0",
     "react": "16.7.0-alpha.2",
-    "react-dom": "^16.6.3",
+    "react-dom": "^16.7.0-alpha.2",
     "react-hooks-global-state": "^0.4.1",
     "react-icons": "^3.2.2",
     "react-notifications-component": "^1.0.1",

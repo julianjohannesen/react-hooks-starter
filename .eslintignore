@@ -5,3 +5,4 @@
 **/build/*
 **/deprecated/*
 /src/backup.js
+**/serviceWorker.js
