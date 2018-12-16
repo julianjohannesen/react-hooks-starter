@@ -4,7 +4,7 @@ import './Footer.css';
 const Footer = () => (
   <Fragment>
     <div className="Footer__footer">
-        Footer
+      Footer
     </div>
   </Fragment>
 );

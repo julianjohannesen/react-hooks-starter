@@ -7,26 +7,24 @@ import { MenuIcon, IconButton } from 'icons';
 
 import './Header.css';
 
-const Header = ({
-  toggleDrawer,
-}) => (
+const Header = ({ toggleDrawer, modalOpen }) => (
   <Fragment>
     <header className="Header__header">
       <AppBar
         position="fixed"
-      // className={classes.appBar}
+        // className={classes.appBar}
       >
         <Toolbar>
           <IconButton
             color="inherit"
             aria-label="Open drawer"
             onClick={toggleDrawer}
-          // className={classes.menuButton}
+            // className={classes.menuButton}
           >
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" color="inherit" noWrap>
-            React Hooks Starter
+          React Hooks Starter
           </Typography>
         </Toolbar>
       </AppBar>

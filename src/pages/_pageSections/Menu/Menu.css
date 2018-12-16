@@ -1,3 +1,6 @@
 .menu {
   color: blue;
 }
+.menu__menuItems {
+  width: 150px;
+}
