@@ -13,7 +13,7 @@ import List from './ui/List/List';
 import { LoaderStyled as Loader } from './ui/Loader/LoaderWrapper';
 import Portal from './ui/Portal/Portal';
 import { RadioQuestion as Radio } from './ui/Radio/RadioQuestion/RadioQuestion';
-import Select from './ui/Select/SelectQuestion/SelectQuestion';
+import Select from './ui/Select/SelectInput/SelectInput';
 import { TextAreaStyled as TextArea } from './ui/TextArea/TextAreaStyled';
 
 
