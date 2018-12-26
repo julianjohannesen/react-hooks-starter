@@ -1,6 +1,35 @@
-.menu {
-  color: blue;
+a { 
+  color: black;
+  text-decoration: none;
 }
-.menu__menuItems {
-  width: 150px;
+.Menu {
+  color: black;
+}
+.Menu a { 
+  color: white;
+  text-decoration: none;
+}
+.Menu a:hover { 
+  text-decoration: underline;
+}
+.Menu__items {
+  margin-top: 60px;
+  width: 250px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.Menu_items ul a { 
+  color: white;
+  text-decoration: none;
+}
+.Menu__item {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  padding: 15px;
+}
+.Menu__item--icon {
+  width: 50px;
 }

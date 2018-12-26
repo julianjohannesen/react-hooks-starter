@@ -8,7 +8,6 @@ const App = () => (
       <PageStructure />
     </Router>
   </Fragment>
-
 );
 
 export default App;

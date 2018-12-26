@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 // import PropTypes from 'prop-types';
 import { InboxIcon } from 'icons';
-import { Drawer, List, ListItemLink } from 'ui';
+import { Drawer, List, ListItemLink, ListItemText } from 'ui';
 import Header from '../Header/Header';
 import './Menu.css';
 
@@ -9,46 +9,54 @@ import './Menu.css';
 const menuLinks = [
   {
     text: 'Alpha',
-    route: 'bubblegum',
+    route: 'alpha',
   },
   {
     text: 'Beta',
-    route: 'shoelaces',
+    route: 'beta',
   },
   {
     text: 'Gamma',
-    route: 'inbox',
+    route: 'gamma',
   },
   {
     text: 'Delta',
-    route: 'inbox',
+    route: 'delta',
   },
 ];
 
 const menuItems = (
-  <Fragment>
-    <div className="menu__menuItems">
-      <List>
-        {menuLinks.map(menuLink => (
-          <ListItemLink key={menuLink.text} to={`/${menuLink.route}`} primary={menuLink.text}>
-            <InboxIcon />
+  <div className="Menu__items">
+    <List>
+      {menuLinks.map(menuLink => (
+          <ListItemLink 
+            key={menuLink.text} 
+            to={`/${menuLink.route}`} 
+            className='Menu__item--link'
+          >
+            <div className="Menu__item">
+              <div className="Menu__item--icon">
+                <InboxIcon />
+              </div>
+              <div className="Menu__item--text">
+                <ListItemText primary={menuLink.text} />
+              </div>
+            </div>
           </ListItemLink>
-        ))}
-      </List>
-    </div>
-  </Fragment>
+      ))}
+    </List>
+  </div>
 );
 
 const Menu = ({ toggleDrawer, modalOpen }) => (
   <Fragment>
-    <Header
-      toggleDrawer={toggleDrawer}
-    />
+    <Header toggleDrawer={toggleDrawer} />
     <Drawer
       toggleDrawer={toggleDrawer}
       modalOpen={modalOpen}
     >
       {menuItems}
     </Drawer>
-  </Fragment>);
+  </Fragment>
+  );
 export default Menu;
